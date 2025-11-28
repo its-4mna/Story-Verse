@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    background: linear-gradient(135deg, #f3e7e9 0%, #e3eeff 100%); /* Soft background */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+/* The Main Card Wrapper */
+.card-container {
+    width: 800px;
+    height: 500px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden; /* Ensures rounded corners clip the content */
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+/* The Form Side (Lighter Purple/Blue) */
+.form-side {
+    background-color: #928adb; /* The lighter purple from the image */
+    padding: 50px;
+}
+
+/* The Banner Side (Darker Purple) */
+.banner-side {
+    background-color: #724ae8; /* The dark purple from the image */
+    background: linear-gradient(to right, #7a4ba3, #6e44a0);
+    padding: 50px;
+}
+
+/* Form Controls Styling */
+form {
+    width: 100%;
+    max-width: 320px; /* Keeps inputs from getting too wide */
+}
+
+input.form-control {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+}
+
+/* Placeholder color styling */
+input::placeholder {
+    color: #888;
+    font-size: 0.85rem;
+}
+
+/* Button Styling */
+.btn-dark {
+    background-color: #2c2c2c;
+    border: none;
+    padding: 10px 0;
+    transition: transform 0.2s;
+}
+
+.btn-dark:hover {
+    background-color: #000;
+    transform: scale(1.05);
+}
+
+.btn-outline-light {
+    border-width: 2px;
+    font-weight: 600;
+}
+
+.btn-outline-light:hover {
+    background-color: #fff;
+    color: #724ae8;
+}
