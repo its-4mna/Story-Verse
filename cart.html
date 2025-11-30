@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Verse - Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body onload="loadCart()">
+
+    <!-- Navigation -->
+     <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="simple-nav" class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center text-white" href="#">
+            <div class="nav-circle-icon me-2">
+                <img class="nav-logo" src="LOGO.jpg" alt="LOGO">
+            </div>
+            <span class="fw-bold">STORY VERSE</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
+                <li class="nav-item"><a class="nav-link" href="topsellers.html">Top Sellers</a></li>
+                <li class="nav-item"><a class="nav-link" href="signup-signin.html">Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    
+
+    <div class="container">
+        
+        <div class="cart-container">
+            
+            <!-- Table Headers (Hidden if empty) -->
+            <div id="table-headers" class="row text-center table-header d-none d-md-flex">
+                <div class="col-md-5 text-start ps-5">Item</div>
+                <div class="col-md-2">Price</div>
+                <div class="col-md-3">Qty</div>
+                <div class="col-md-2">Subtotal</div>
+            </div>
+
+            <!-- THIS IS WHERE ITEMS WILL APPEAR DYNAMICALLY -->
+            <div id="cart-items">
+                <!-- Javascript will put items here -->
+            </div>
+
+            <!-- Empty Cart Message (Hidden by default) -->
+            <div id="empty-message" class="text-center" style="display:none;">
+                <h3>Your cart is empty!</h3>
+                <p>Go back to add some books.</p>
+                <a href="categories.html" class="btn-browse">Browse Books</a>
+            </div>
+
+            <!-- Footer Note -->
+            <div id="cart-footer" class="delivery-note">
+                *Delivery charges are applicable
+            </div>
+        </div>
+
+        <!-- Checkout Button -->
+        <a href="payment.html" id="checkout-link" class="text-decoration-none">
+            <button class="btn-checkout">Proceed to Checkout</button>
+        </a>
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // 1. Load the Cart when page opens
+        function loadCart() {
+            let cartData = localStorage.getItem('storyVerseCart');
+            let cartItemsContainer = document.getElementById('cart-items');
+            let emptyMessage = document.getElementById('empty-message');
+            let tableHeaders = document.getElementById('table-headers');
+            let checkoutLink = document.getElementById('checkout-link');
+            let footer = document.getElementById('cart-footer');
+
+            // If cart is empty or doesn't exist
+            if (!cartData || JSON.parse(cartData).length === 0) {
+                cartItemsContainer.innerHTML = '';
+                emptyMessage.style.display = 'block';
+                tableHeaders.style.display = 'none'; // Hide headers
+                tableHeaders.classList.remove('d-md-flex'); 
+                checkoutLink.style.display = 'none'; // Hide checkout button
+                footer.style.display = 'none';
+                return;
+            }
+
+            // If items exist display them
+            let cart = JSON.parse(cartData);
+            let htmlContent = '';
+
+            cart.forEach((product, index) => {
+                let subtotal = product.price * product.qty;
+                
+                htmlContent += `
+                <div class="row align-items-center cart-item-row">
+                    <!-- Image & Title -->
+                    <div class="col-md-5 d-flex align-items-center">
+                        <img src="${product.image}" alt="${product.name}" class="product-img">
+                        <span class="item-title">${product.name}</span>
+                    </div>
+                    
+                    <!-- Price -->
+                    <div class="col-md-2 price-text text-center">
+                        PKR <span class="price-unit">${product.price}</span>
+                    </div>
+
+                    <!-- Quantity Section -->
+                    <div class="col-md-3 qty-box">
+                        <button class="qty-btn" onclick="updateQty(${index}, 1)">+</button>
+                        <input type="text" value="${product.qty}" class="qty-input" readonly>
+                        <button class="qty-btn" onclick="updateQty(${index}, -1)">-</button>
+                    </div>
+
+                    <!-- Subtotal -->
+                    <div class="col-md-2 price-text text-center">
+                        PKR <span class="subtotal">${subtotal}</span>
+                    </div>
+                    
+                    <!-- Remove Button (Optional small X) -->
+                    <div class="col-12 text-center mt-2 d-md-none">
+                        <small class="text-danger" onclick="removeItem(${index})" style="cursor:pointer;">Remove</small>
+                    </div>
+                </div>`;
+            });
+
+            cartItemsContainer.innerHTML = htmlContent;
+        }
+
+        // 2. Update Quantity
+        function updateQty(index, change) {
+            let cart = JSON.parse(localStorage.getItem('storyVerseCart'));
+            
+            cart[index].qty += change;
+
+            // If qty goes to 0, remove item
+            if (cart[index].qty <= 0) {
+                cart.splice(index, 1);
+            }
+
+            // Save back to storage and Reload the view
+            localStorage.setItem('storyVerseCart', JSON.stringify(cart));
+            loadCart();
+        }
+
+        // 3. Remove Item Helper
+        function removeItem(index) {
+            let cart = JSON.parse(localStorage.getItem('storyVerseCart'));
+            cart.splice(index, 1);
+            localStorage.setItem('storyVerseCart', JSON.stringify(cart));
+            loadCart();
+        }
+    </script>
+
+</body>
+</html>

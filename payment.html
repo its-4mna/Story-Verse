@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Verse - Payment Details</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons (Logo placeholder) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+
+    <!-- Navigation (Links to other pages) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">Story Verse</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="top-sellers.html">Top Sellers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signup-signin.html">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Banner -->
+    <header class="main-header">
+        <div class="container d-flex align-items-center">
+            <div class="logo-area">
+                <img class="logo" src="LOGO.jpg" alt="logo">
+            </div>
+            <h1 class="mx-auto">Story Verse</h1>
+        </div>
+    </header>
+
+    <div class="container main-content mt-4">
+        <h2 class="section-title mb-4">Payment Details</h2>
+
+        <!-- Input Form Section -->
+        <form id="paymentForm">
+            <!-- Row 1 -->
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label class="form-label custom-label">Country/Region</label>
+                    <input type="text" class="form-control custom-input">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label custom-label">First Name</label>
+                    <input type="text" class="form-control custom-input">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label custom-label">Last Name</label>
+                    <input type="text" class="form-control custom-input">
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label class="form-label custom-label">Address</label>
+                    <input type="text" class="form-control custom-input">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label custom-label">Apartment/suite, etc. (optional)</label>
+                    <input type="text" class="form-control custom-input">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label custom-label">City</label>
+                    <input type="text" class="form-control custom-input">
+                </div>
+            </div>
+
+            <!-- Row 3 (Phone Centered) -->
+            <div class="row mb-5 justify-content-center">
+                <div class="col-md-4">
+                    <label class="form-label custom-label text-center d-block">Phone Number</label>
+                    <input type="text" class="form-control custom-input">
+                </div>
+            </div>
+
+            <!-- Bottom Section Grid -->
+            <div class="row g-5">
+                
+                <!-- Payment Method -->
+                <div class="col-md-4">
+                    <h3 class="sub-heading text-center mb-3">Payment Method</h3>
+                    <div class="radio-group">
+                        <label class="custom-radio-box">
+                            <input type="radio" name="payment" checked>
+                            <span>Debit or Credit Card</span>
+                        </label>
+                        <label class="custom-radio-box">
+                            <input type="radio" name="payment">
+                            <span>Google Pay</span>
+                        </label>
+                        <label class="custom-radio-box">
+                            <input type="radio" name="payment">
+                            <span>Local Online Payments</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Billing Address -->
+                <div class="col-md-4">
+                    <h3 class="sub-heading text-center mb-3">Billing Address</h3>
+                    <div class="radio-group">
+                        <label class="custom-radio-box">
+                            <input type="radio" name="billing" checked>
+                            <span>Same As Shipping</span>
+                        </label>
+                        <label class="custom-radio-box">
+                            <input type="radio" name="billing">
+                            <span>Add Address 01</span>
+                        </label>
+                        <label class="custom-radio-box">
+                            <input type="radio" name="billing">
+                            <span>Add Address 02</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="col-md-4">
+                    <h3 class="sub-heading text-center mb-3">Order Summary</h3>
+                    
+                    <div class="summary-row d-flex justify-content-between mb-2">
+                        <span class="summary-pill label-pill">Items QTY</span>
+                        <span class="summary-pill value-pill">02</span>
+                    </div>
+                    <div class="summary-row d-flex justify-content-between mb-2">
+                        <span class="summary-pill label-pill">Type</span>
+                        <span class="summary-pill value-pill">Books</span>
+                    </div>
+                    <div class="summary-row d-flex justify-content-between mb-2">
+                        <span class="summary-pill label-pill">Subtotal</span>
+                        <span class="summary-pill value-pill">950</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Confirm Payment Button Area -->
+            <div class="confirm-area text-center mt-5 mb-5">
+                <div class="d-inline-flex align-items-center">
+                    <!-- Abstract shape mimic using CSS -->
+                    <button type="button" class="btn-confirm" onclick="confirmOrder()">
+                        Confirm payment
+                    </button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        function confirmOrder() {
+            // Simple validation check
+            alert("Payment Confirmed! Redirecting to Home...");
+            // Simulate redirection
+          
+                window.location.href = 'home.html';
+          
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

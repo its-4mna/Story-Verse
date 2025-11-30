@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storyverse - Book Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <img class="logo" src="LOGO.jpg" alt="logo">
+            <h2 class="header-">Storyverse</h2>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="home.html" class="nav-link">Home</a></li>
+                    <li><a href="categories.html" class="nav-link active">Categories</a></li>
+                    <li><a href="topsellers.html" class="nav-link">Top Sellers</a></li>
+                    <li><a href="cart.html" class="nav-link">Cart</a></li>
+                </ul>
+            </nav>
+            <div class="search-section">
+                <div class="search-box">
+                    <input type="text" placeholder="Search books..." id="searchInput">
+                    <button class="search-btn"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <!-- Sidebar with Categories -->
+        <aside class="sidebar">
+            <h2>Categories</h2>
+            
+            <!-- Removed the entire filters section -->
+            
+            <div class="sidebar-categories">
+                <a href="categories html/fiction-books.html" class="category-item">
+                    <span class="category-name">Fiction</span>
+                    <span class="book-count">8</span>
+                </a>
+                <a href="categories html/nonfiction-books.html" class="category-item">
+                    <span class="category-name">Non-fiction</span>
+                    <span class="book-count">12</span>
+                </a>
+                <a href="categories html/romance.html" class="category-item">
+                    <span class="category-name">Romance</span>
+                    <span class="book-count">12</span>
+                </a>
+                <a href="categories html/mystery.html" class="category-item">
+                    <span class="category-name">Mystery & Thriller</span>
+                    <span class="book-count">12</span>
+                </a>
+                <a href="categories html/islamic.html" class="category-item">
+                    <span class="category-name">Islamic books</span>
+                    <span class="book-count">12</span>
+                </a>
+                <a href="categories html/textbooks.html" class="category-item">
+                    <span class="category-name">Textbooks</span>
+                    <span class="book-count">12</span>
+                </a>
+                <a href="topsellers.html" class="category-item">
+                    <span class="category-name">Top Sellers</span>
+                    <span class="book-count">15</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Content Area -->
+        <main class="content-area">
+            <div class="page-header">
+                <h1>Browse Categories</h1>
+                <p class="page-subtitle">Discover books from all genres</p>
+            </div>
+
+            <!-- Fiction Section -->
+            <section id="fiction" class="category-section">
+                <h2>Fiction Books (8)</h2>
+                <div class="books-grid" id="fictionBooks">
+                    <!-- Fiction books will be loaded by JavaScript -->
+                </div>
+                
+                <!-- View More Button for Fiction -->
+                <div class="view-more-section">
+                    <button class="view-more-btn" onclick="location.href='categories html/fiction-books.html'">View More (4 more)</button>
+                </div>
+            </section>
+
+            <!-- Non-fiction Section -->
+            <section id="non-fiction" class="category-section">
+                <h2>Non-fiction Books (12)</h2>
+                <div class="books-grid" id="nonfictionBooks">
+                    <!-- Non-fiction books will be loaded by JavaScript -->
+                </div>
+                
+                <!-- View More Button for Non-fiction -->
+                <div class="view-more-section">
+                    <button class="view-more-btn" onclick="location.href='categories html/nonfiction-books.html'">View More (6 more)</button>
+                </div>
+            </section>
+
+            <!-- Romance Section -->
+            <section id="romance" class="category-section">
+                <h2>Romance Books (12)</h2>
+                <div class="books-grid" id="romanceBooks">
+                    <!-- Romance books will be loaded by JavaScript -->
+                </div>
+                
+                <!-- View More Button for Romance -->
+                <div class="view-more-section">
+                    <button class="view-more-btn" onclick="location.href='categories html/romance.html'">View More (6 more)</button>
+                </div>
+            </section>
+
+            <!-- Mystery & Thriller Section -->
+            <section id="mystery-thriller" class="category-section">
+                <h2>Mystery & Thriller Books (12)</h2>
+                <div class="books-grid" id="mysteryBooks">
+                    <!-- Mystery books will be loaded by JavaScript -->
+                </div>
+                
+                <!-- View More Button for Mystery & Thriller -->
+                <div class="view-more-section">
+                    <button class="view-more-btn" onclick="location.href='categories html/mystery.html'">View More (6 more)</button>
+                </div>
+            </section>
+
+            <!-- Islamic Books Section -->
+            <section id="islamic" class="category-section">
+                <h2>Islamic Books (12)</h2>
+                <div class="books-grid" id="islamicBooks">
+                    <!-- Islamic books will be loaded by JavaScript -->
+                </div>
+                
+                <!-- View More Button for Islamic Books -->
+                <div class="view-more-section">
+                    <button class="view-more-btn" onclick="location.href='categories html/islamic.html'">View More (6 more)</button>
+                </div>
+            </section>
+
+            <!-- Textbooks Section -->
+            <section id="textbooks" class="category-section">
+                <h2>Textbooks (12)</h2>
+                <div class="books-grid" id="textbooksBooks">
+                    <!-- Textbook books will be loaded by JavaScript -->
+                </div>
+                
+                <!-- View More Button for Textbooks -->
+                <div class="view-more-section">
+                    <button class="view-more-btn" onclick="location.href='categories html/textbooks.html'">View More (6 more)</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Storyverse. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="categories js/script.js"></script>
+</body>
+</html>

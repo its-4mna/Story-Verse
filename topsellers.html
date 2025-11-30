@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Sellers - Storyverse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <img class="logo" src="../LOGO.jpg" alt="logo">
+            <h2>Storyverse</h2>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="home.html" class="nav-link">Home</a></li>
+                    <li><a href="categories.html" class="nav-link">Categories</a></li>
+                    <li><a href="topsellers.html" class="nav-link active">Top Sellers</a></li>
+                    <li><a href="cart.html" class="nav-link">Cart</a></li>
+                </ul>
+            </nav>
+            <div class="search-section">
+                <div class="search-box">
+                    <input type="text" placeholder="Search books..." id="searchInput">
+                    <button class="search-btn">🔍</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        <aside class="sidebar">
+            <h2>Categories</h2>
+
+            <!-- Removed the entire filters section -->
+            
+            <div class="sidebar-categories">
+                <a href="categories html/fiction-books.html" class="category-item">
+                    <span class="category-name">Fiction</span>
+                    <span class="book-count">124</span>
+                </a>
+                <a href="categories html/nonfiction-books.html" class="category-item">
+                    <span class="category-name">Non-fiction</span>
+                    <span class="book-count">120</span>
+                </a>
+                <a href="categories html/romance.html" class="category-item">
+                    <span class="category-name">Romance</span>
+                    <span class="book-count">98</span>
+                </a>
+                <a href="categories html/mystery.html" class="category-item">
+                    <span class="category-name">Mystery & Thriller</span>
+                    <span class="book-count">87</span>
+                </a>
+                <a href="categories html/islamic.html" class="category-item">
+                    <span class="category-name">Islamic books</span>
+                    <span class="book-count">65</span>
+                </a>
+                <a href="categories html/textbooks.html" class="category-item">
+                    <span class="category-name">Textbooks</span>
+                    <span class="book-count">112</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="content-area books-page">
+            <div class="page-header">
+                <h1>Top Sellers</h1>
+                <p class="page-subtitle">Most popular books this week</p>
+            </div>
+
+            <div class="books-grid" id="booksContainer">
+                <!-- Books will be loaded here by JavaScript -->
+            </div>
+
+            <div class="view-more-section">
+                <button class="view-more-btn" id="viewMoreBtn">View More →</button>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Storyverse. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="categories js/topsellers.js"></script>
+</body>
+</html>
