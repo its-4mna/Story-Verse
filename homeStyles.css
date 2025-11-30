@@ -1,0 +1,229 @@
+:root /*color declaration*/
+{
+    --main-purple: #9067c6;
+    --dark-purple: #5a378a;
+    --bg-body: #e6e2ea;
+    --text-dark: #333;
+}
+
+body 
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    background: white;
+}
+
+.main-navbar 
+{
+    background-color: var(--main-purple);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    padding: 15px 0;
+}
+
+.nav-logo 
+{
+    background: white; 
+    border-radius: 50%; 
+    width: 35px; 
+    height: 35px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: var(--main-purple);
+}
+
+
+.navbar-nav .nav-link 
+{
+    color: white !important;
+    font-weight: 600;
+    margin: 0 10px;
+    font-size: 1.05rem;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.navbar-nav .nav-link:hover 
+{
+    color: #e6e2ea !important;
+    transform: translateY(-2px);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.search-wrapper 
+{
+    position: relative;
+}
+
+.search-bar 
+{
+    width: 250px;
+    border-radius: 20px;
+    border: none;
+    padding: 6px 35px 6px 15px; /* Right padding for icon */
+    background-color: rgba(255,255,255,0.9);
+    transition: width 0.3s;
+}
+
+.search-bar:focus 
+{
+    width: 300px;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+
+.search-icon 
+{
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--main-purple);
+    pointer-events: none;
+}
+
+.navbar-toggler 
+{
+    border-color: rgba(255,255,255,0.5);
+}
+
+
+
+.hero-banner 
+{
+    background-image: url('background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 300px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: 3px solid var(--text-dark);
+}
+
+.main-logo 
+{
+    background-color: #723DB7;
+    padding: 10px 10px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    border: 1px solid #333;
+    width: 260px;
+    height: 260px;
+}
+
+
+.section-header 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.section-header h4 
+{
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.section-header .view-all 
+{
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: var(--main-purple);
+    font-weight: 700;
+}
+
+.section-header .view-all:hover 
+{
+    text-decoration: underline;
+}
+
+.book-card 
+{
+    background: white;
+    border: 2px solid var(--text-dark);
+    transition: transform 0.2s;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.15); /* Slightly deeper shadow */
+    height: 100%;
+}
+
+.book-card:hover 
+{
+    transform: translateY(-5px);
+    box-shadow: 7px 7px 0px rgba(0,0,0,0.15);
+}
+
+.book-img 
+{
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.main-footer 
+{
+    background-color: var(--dark-purple);
+    color: white;
+    padding-top: 50px;
+    margin-top: 60px;
+    border-top: 5px solid var(--main-purple);
+}
+
+.footer-logo
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.footer-links li 
+{
+    margin-bottom: 10px;
+}
+
+.footer-links a 
+{
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover 
+{
+    color: white;
+    padding-left: 5px; 
+}
+
+.social-icons
+{
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a 
+{
+    background-color: rgba(255,255,255,0.1);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.social-icons a:hover 
+{
+    background-color: var(--main-purple);
+}

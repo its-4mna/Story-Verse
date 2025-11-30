@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Verse - Online Bookstore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="homeStyles.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top main-navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center text-white" href="#">
+            <div class="nav-circle-icon me-2">
+                <img class="nav-logo" src="LOGO.jpg" alt="LOGO">
+            </div>
+            <span class="fw-bold">STORY VERSE</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
+                <li class="nav-item"><a class="nav-link" href="topsellers.html">Top Sellers</a></li>
+                <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                <li class="nav-item"><a class="nav-link" href="payment.html">Payment</a></li>
+            </ul>
+            
+            <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+                <div class="search-wrapper">
+                    <input type="text" class="search-bar" placeholder="Search books...">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                </div>
+                <a href="signup-signin.html" class="btn btn-outline-light btn-sm fw-bold">Log Out</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO BANNER -->
+<div class="hero-banner">
+    <div class="hero-logo-card">
+        <img class="main-logo" src="LOGO.jpg" alt="LOGO">
+    </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="container my-5">
+    
+    <!-- Section 1: -->
+    <div class="position-relative mb-5">
+        <div class="section-header">
+            <h4>On Sale</h4>
+            <a href="categories.html" class="view-all">View all <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="row book-grid">
+            <!-- Book Items -->
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/81A+mvU+xCL._AC_UF1000,1000_QL80_.jpg" alt="Book" class="book-img"></div></div>
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/71FTb9X6wsL.jpg" alt="Book" class="book-img"></div></div>
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/91+q+S-02TL._AC_UF1000,1000_QL80_.jpg" alt="Book" class="book-img"></div></div>
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/81k1b6uJb+L._AC_UF1000,1000_QL80_.jpg" alt="Book" class="book-img"></div></div>
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/81t3Q7iL+4L._AC_UF1000,1000_QL80_.jpg" alt="Book" class="book-img"></div></div>
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/81YkqyaFVEL._AC_UF1000,1000_QL80_.jpg" alt="Book" class="book-img"></div></div>
+        </div>
+    </div>
+
+    <!-- Section 2: -->
+    <div class="position-relative mb-5">
+        <div class="section-header">
+            <h4>Trending</h4>
+            <a href="categories.html" class="view-all">View all <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="row book-grid">
+            <!-- Book Items -->
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/81A+mvU+xCL._AC_UF1000,1000_QL80_.jpg" alt="Book" class="book-img"></div></div>
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/71FTb9X6wsL.jpg" alt="Book" class="book-img"></div></div>
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/91+q+S-02TL._AC_UF1000,1000_QL80_.jpg" alt="Book" class="book-img"></div></div>
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/81k1b6uJb+L._AC_UF1000,1000_QL80_.jpg" alt="Book" class="book-img"></div></div>
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/81t3Q7iL+4L._AC_UF1000,1000_QL80_.jpg" alt="Book" class="book-img"></div></div>
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/81YkqyaFVEL._AC_UF1000,1000_QL80_.jpg" alt="Book" class="book-img"></div></div>
+        </div>
+    </div>
+
+    <!-- Section 3: -->
+    <div class="position-relative mb-5">
+        <div class="section-header">
+            <h4>Recommended For You</h4>
+            <a href="categories.html" class="view-all">View all <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="row book-grid">
+            <!-- Book Items -->
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/81A+mvU+xCL._AC_UF1000,1000_QL80_.jpg" alt="Book" class="book-img"></div></div>
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/71FTb9X6wsL.jpg" alt="Book" class="book-img"></div></div>
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/91+q+S-02TL._AC_UF1000,1000_QL80_.jpg" alt="Book" class="book-img"></div></div>
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/81k1b6uJb+L._AC_UF1000,1000_QL80_.jpg" alt="Book" class="book-img"></div></div>
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/81t3Q7iL+4L._AC_UF1000,1000_QL80_.jpg" alt="Book" class="book-img"></div></div>
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/81YkqyaFVEL._AC_UF1000,1000_QL80_.jpg" alt="Book" class="book-img"></div></div>
+        </div>
+    </div>
+
+    <!-- Section 4: -->
+    <div class="position-relative mb-5">
+        <div class="section-header">
+            <h4>Featuring</h4>
+            <a href="categories.html" class="view-all">View all <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="row book-grid">
+            <!-- Book Items -->
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/81A+mvU+xCL._AC_UF1000,1000_QL80_.jpg" alt="Book" class="book-img"></div></div>
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/71FTb9X6wsL.jpg" alt="Book" class="book-img"></div></div>
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/91+q+S-02TL._AC_UF1000,1000_QL80_.jpg" alt="Book" class="book-img"></div></div>
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/81k1b6uJb+L._AC_UF1000,1000_QL80_.jpg" alt="Book" class="book-img"></div></div>
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/81t3Q7iL+4L._AC_UF1000,1000_QL80_.jpg" alt="Book" class="book-img"></div></div>
+            <div class="col-6 col-md-4 col-lg-2 mb-3"><div class="book-card"><img src="https://m.media-amazon.com/images/I/81YkqyaFVEL._AC_UF1000,1000_QL80_.jpg" alt="Book" class="book-img"></div></div>
+        </div>
+    </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+    <div class="container">
+        <div class="row">
+            <!-- Column 1: About -->
+            <div class="col-md-4 mb-4">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="nav-circle-icon small me-2" style="color:var(--main-purple);">
+                        <img class="footer-logo"src="LOGO.jpg" alt="LOGO">
+                    </div>
+                    <h5 class="fw-bold mb-0">Story Verse</h5>
+                </div>
+                <p class="text-white-50">
+                    We are an independent online bookstore offering a curated collection of fiction, non-fiction, and trending titles. Join our community of readers today.
+                </p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold mb-3">Quick Links</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">FAQ & Help</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact & Social -->
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold mb-3">Contact Us</h5>
+                <p class="text-white-50 mb-1"><i class="fa-solid fa-location-dot me-2"></i> FAST NUCES</p>
+                <p class="text-white-50 mb-1"><i class="fa-solid fa-phone me-2"></i> +92 123 4567890</p>
+                <p class="text-white-50 mb-3"><i class="fa-solid fa-envelope me-2"></i> hello@storyverse.com</p>
+                
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="border-secondary">
+        <div class="text-center text-white-50 pb-3">
+            <small>&copy; 2025 Story Verse. All rights reserved.</small>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+    function addToCart(bookName, price, imageUrl) {
+        // Get existing cart from storage or start empty array
+        let cart = JSON.parse(localStorage.getItem('storyVerseCart')) || [];
+
+        // Check if item already exists
+        let existingItem = cart.find(item => item.name === bookName);
+
+        if (existingItem) {
+            // If exists, just increase quantity
+            existingItem.qty += 1;
+        } else {
+            // If new, add to array
+            cart.push({
+                name: bookName,
+                price: price,
+                image: imageUrl,
+                qty: 1
+            });
+        }
+
+        // Save back to storage
+        localStorage.setItem('storyVerseCart', JSON.stringify(cart));
+        
+        alert(bookName + " added to cart!");
+    }
+
+</script>
+</body>
+</html>
